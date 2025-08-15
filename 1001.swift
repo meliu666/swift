@@ -1,24 +1,14 @@
-//
-//  ContentView.swift
-//  WeatherForecast
-//
-//
-//
-
-
 import SwiftUI
-
 
 struct ContentView: View {
     var body: some View {
         HStack {
-            DayForecast(day: "Mon", isRainy: false, high: 70, low: 50)
+            DayForecast(isRainy: true, high: 70, low:20)
             
-            DayForecast(day: "Tue", isRainy: true, high: 60, low: 40)
+            DayForecast(isRainy: false, high: 60)
         }
     }
 }
-
 
 #Preview {
     ContentView()
@@ -26,10 +16,10 @@ struct ContentView: View {
 
 
 struct DayForecast: View {
-    let day: String
+    let day: String = "day"
     let isRainy: Bool
     let high: Int
-    let low: Int
+    var low: Int = 15
     
     var iconName: String {
         if isRainy {
