@@ -29,7 +29,7 @@ struct ContentView: View {
     }
 }
 
-#Preview(body: {
+#Preview {
     ContentView()
-})
+}
 
